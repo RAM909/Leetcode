@@ -1,4 +1,4 @@
-SELECT a.machine_id, 
+SELECT a.machine_id as "machine_id", 
        ROUND(AVG(b.timestamp - a.timestamp), 3) AS processing_time
 FROM Activity a, 
      Activity b
@@ -10,4 +10,4 @@ AND
     a.activity_type = 'start'
 AND 
     b.activity_type = 'end'
-GROUP BY machine_id
+GROUP BY machine_id;
