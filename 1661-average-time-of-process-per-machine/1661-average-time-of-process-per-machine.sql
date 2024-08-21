@@ -1,4 +1,4 @@
-SELECT a.machine_id as "machine_id", 
+SELECT a.machine_id , 
        ROUND(AVG(b.timestamp - a.timestamp), 3) AS processing_time
 FROM Activity a, 
      Activity b
