@@ -1,13 +1,13 @@
 SELECT a.machine_id , 
-       ROUND(AVG(b.timestamp - a.timestamp), 3) as "processing_time"
-FROM Activity a, 
-     Activity b
+       ROUND(AVG(a.timestamp - b.timestamp), 3) as "processing_time"
+FROM Activity b, 
+     Activity a
 WHERE 
-    a.machine_id = b.machine_id
+    b.machine_id = a.machine_id
 AND 
-    a.process_id = b.process_id
+    b.process_id = a.process_id
 AND 
-    a.activity_type = 'start'
+    b.activity_type = 'start'
 AND 
-    b.activity_type = 'end'
+    a.activity_type = 'end'
 GROUP BY machine_id;
