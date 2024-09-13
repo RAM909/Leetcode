@@ -1,6 +1,6 @@
 # Write your MySQL query statement below
 SELECT
-    Employee.name, Bonus.bonus
+    Employee.name as "name", Bonus.bonus
 FROM
     Employee
         LEFT OUTER JOIN
