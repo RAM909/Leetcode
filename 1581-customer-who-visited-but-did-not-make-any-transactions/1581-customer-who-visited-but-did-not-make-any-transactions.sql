@@ -1,5 +1,5 @@
 SELECT 
-  customer_id as "customer_id", 
+  customer_id , 
   COUNT(visit_id) AS "count_no_trans" 
 FROM 
   Visits 
