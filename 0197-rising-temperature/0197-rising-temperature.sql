@@ -1,5 +1,5 @@
 SELECT 
-    w1.id 
+    w1.id as "Id"
 FROM 
     Weather w1
 JOIN 
